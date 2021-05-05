@@ -1,0 +1,13 @@
+@use 'styles' as *;
+
+.cardHeader {
+  @include resetHeading();
+  @include font(rem(18), rem(28), bold);
+  color: #282c30;
+}
+
+.cardDescription {
+  @include resetPara();
+  @include font(rem(16));
+  color: #495057;
+}

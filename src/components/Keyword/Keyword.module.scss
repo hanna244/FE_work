@@ -1,0 +1,15 @@
+@use 'styles' as *;
+
+.keyword {
+  @include resetPara();
+  @include font(rem(13));
+  color: #7e848a;
+}
+
+.largeSize {
+  @include font(rem(16));
+}
+
+.greenColor {
+  color: #00c854;
+}
