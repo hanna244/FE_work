@@ -1,0 +1,11 @@
+@use 'styles' as *;
+
+.filterButton {
+  @include resetButton();
+  @include font(rem(13), rem(25), normal);
+  padding: em(2) em(12);
+  border-radius: 3px;
+  border: solid 1px #e1e4e7;
+  color: #adb5bd;
+  background-color: #ffffff;
+}

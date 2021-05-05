@@ -1,0 +1,10 @@
+@use 'styles' as *;
+
+.button {
+  @include resetButton();
+  @include font(rem(22), rem(25), bold);
+  padding: em(12.8) em(10);
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #00c854;
+}
