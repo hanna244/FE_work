@@ -1,0 +1,42 @@
+@use 'styles' as *;
+
+.checkbox {
+  @include font(rem(13));
+  position: relative;
+  cursor: pointer;
+  color: #adb5bd;
+
+  input[type='checkbox'] {
+    cursor: inherit;
+    opacity: 0;
+    width: rem(6);
+    height: rem(6);
+    margin-right: rem(5);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 48%;
+    left: 0;
+    transform: translateY(-53%);
+    width: rem(6);
+    height: rem(6);
+    border-radius: 50%;
+    background-color: #e1e4e7;
+  }
+
+  &:focus-within {
+    &::before {
+      box-shadow: 0 0 0 rem(2) #0a85ff;
+    }
+  }
+}
+
+.checked {
+  color: #495057;
+
+  &::before {
+    background-color: #00c854 !important;
+  }
+}

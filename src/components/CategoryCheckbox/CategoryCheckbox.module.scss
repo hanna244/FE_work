@@ -1,0 +1,19 @@
+@use 'styles' as *;
+
+.categoryCheckbox {
+  @include font(rem(16), rem(32));
+  color: #495057;
+
+  input[type='checkbox'] {
+    width: rem(20);
+    height: rem(20);
+  }
+
+  &::before {
+    width: rem(20);
+    height: rem(20);
+    border-radius: 0;
+    border: solid 1px #e1e4e7;
+    background-color: #ffffff;
+  }
+}
