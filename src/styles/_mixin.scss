@@ -1,0 +1,13 @@
+$tabletMobile: 768px;
+
+@mixin media {
+  @media (max-width: $tabletMobile) {
+    @content;
+  }
+}
+
+@mixin font($font-size: 10px, $line-height: 2.5rem, $font-weight: null) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}

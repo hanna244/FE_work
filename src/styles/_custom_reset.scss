@@ -1,0 +1,42 @@
+@mixin resetBox() {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+@mixin resetHeading() {
+  margin: 0;
+}
+
+@mixin resetPara() {
+  margin: 0;
+}
+
+@mixin resetImg() {
+  user-select: none;
+  border: 0;
+  vertical-align: middle;
+}
+
+@mixin rwdImg() {
+  width: 100%;
+  height: auto;
+}
+
+@mixin resetList() {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+@mixin resetButton() {
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+}
+
+@mixin resetLink() {
+  text-decoration: none;
+  color: inherit;
+}

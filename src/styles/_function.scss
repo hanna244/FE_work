@@ -1,0 +1,19 @@
+// https://sass-lang.com/documentation/at-rules/function
+
+$base-em-size: 16px;
+$base-rem-size: 10px;
+
+// 사용자가 단위를 입력했을 때 단위가 제거 되는 함수
+@function remove-unit($value) {
+  @return ($value / ($value * 0 + 1));
+}
+
+// 자동으로 em으로 변환해주는 함수
+@function em($px, $base: $base-em-size) {
+  @return (remove-unit($px / $base)) * 1em;
+}
+
+// 자동으로 rem으로 변환해주는 함수
+@function rem($px, $base: $base-rem-size) {
+  @return (remove-unit($px / $base)) * 1rem;
+}
