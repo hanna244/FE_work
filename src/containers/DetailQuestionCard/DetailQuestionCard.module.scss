@@ -1,0 +1,39 @@
+@use 'styles' as *;
+
+.detailQuestionCard {
+  @include minMaxWidth(375, 1140);
+  border-color: #00c854;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+
+  @include media() {
+    border: solid 1px #00c854;
+    border-radius: 5px;
+  }
+
+  .contents {
+    margin: 0;
+
+    .contentHead {
+      @include font(rem(18), rem(27), bold);
+      color: #282c30;
+    }
+
+    .contentBody {
+      @include font(rem(16), rem(24));
+      margin: rem(7) 0 0;
+      color: #495057;
+    }
+  }
+
+  .date {
+    display: block;
+    margin-top: rem(16);
+    color: #adb5bd;
+
+    @include media() {
+      margin-top: rem(15);
+    }
+  }
+}

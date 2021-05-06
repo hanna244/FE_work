@@ -1,0 +1,35 @@
+@use 'styles' as *;
+
+.detailReplyCard {
+  @include minMaxWidth(375, 1140);
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+
+  @include media() {
+    border: solid 1px #e1e4e7;
+    border-radius: 5px;
+  }
+
+  .userName {
+    display: block;
+    padding-bottom: rem(10);
+    border-bottom: solid 1px #e1e4e7;
+  }
+
+  .reply {
+    @include font(rem(16), rem(25));
+    margin: rem(16) 0 0;
+    color: #495057;
+  }
+
+  .date {
+    display: block;
+    margin-top: rem(16);
+    color: #adb5bd;
+
+    @include media() {
+      margin-top: rem(15);
+    }
+  }
+}
