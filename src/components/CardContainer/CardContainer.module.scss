@@ -1,0 +1,12 @@
+@use 'styles' as *;
+
+.cardContainer {
+  padding: rem(20) rem(15);
+  border: solid 1px #0000000d;
+
+  @include media() {
+    padding: rem(20) rem(30);
+    border-radius: 5px;
+    border: solid 1px #e1e4e7;
+  }
+}
