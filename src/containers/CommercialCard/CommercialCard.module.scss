@@ -1,0 +1,59 @@
+@use 'styles' as *;
+
+.commercialCard {
+  @include minMaxWidth(375, 865);
+
+  .commercialSponsor {
+    @include resetPara();
+  }
+
+  .contents {
+    @include resetLink();
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    margin-top: rem(16);
+    width: 100%;
+
+    @include media() {
+      flex-flow: row nowrap;
+    }
+
+    .loadingContainer {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      width: rem(310);
+      height: rem(179);
+    }
+
+    .loadingImg {
+      @include resetImg();
+      width: 100%;
+      height: auto;
+    }
+
+    .commercialSponsor {
+      @include font(rem(13), rem(25));
+      color: #adb5bd;
+    }
+
+    .contentItem {
+      @include resetList();
+      margin: rem(16.5) 0 0;
+      max-width: rem(463);
+      overflow: hidden;
+    }
+
+    .contentHead {
+      @include font(rem(18), rem(27), bold);
+      color: #282c30;
+    }
+
+    .contentBody {
+      @include font(rem(16), rem(24));
+      margin: rem(6) 0 0;
+      color: #495057;
+    }
+  }
+}

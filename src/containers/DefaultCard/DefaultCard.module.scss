@@ -1,0 +1,82 @@
+@use 'styles' as *;
+
+@mixin categoryKeywordStyle($color) {
+  @include resetPara();
+  @include font(rem(13), rem(19));
+  color: $color;
+}
+
+@mixin ellipsisStyle() {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.defaultCard {
+  @include minMaxWidth(375, 865);
+
+  .categoryContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0 0 rem(10);
+    border-bottom: solid rem(1) #e1e4e7;
+  }
+
+  .categoryNameClass {
+    @include categoryKeywordStyle(#7e848a);
+  }
+
+  .categoryIDClass {
+    @include categoryKeywordStyle(#adb5bd);
+  }
+
+  .idAndDate {
+    @include font(rem(13), rem(19));
+    margin-top: rem(16);
+
+    .userID {
+      color: #00c854;
+    }
+
+    .date {
+      display: none;
+    }
+
+    @include media() {
+      .date {
+        display: inline;
+        color: #495057;
+        margin-left: rem(10);
+
+        &::before {
+          content: '';
+          border-left: solid 1px #e1e4e7;
+          margin-right: rem(10);
+        }
+      }
+    }
+  }
+
+  .contents {
+    @include resetLink();
+    margin: rem(16);
+
+    .contentItem {
+      @include resetList();
+    }
+
+    .contentHead {
+      @include font(rem(18), rem(27), bold);
+      @include ellipsisStyle();
+      color: #282c30;
+    }
+
+    .contentBody {
+      @include font(rem(16), rem(24));
+      @include ellipsisStyle();
+      margin: rem(6) 0 0;
+      color: #495057;
+    }
+  }
+}
