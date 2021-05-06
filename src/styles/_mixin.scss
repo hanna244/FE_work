@@ -1,7 +1,7 @@
 $tabletMobile: 768px;
 
 @mixin media {
-  @media (max-width: $tabletMobile) {
+  @media (min-width: $tabletMobile) {
     @content;
   }
 }
@@ -10,4 +10,12 @@ $tabletMobile: 768px;
   font-size: $font-size;
   line-height: $line-height;
   font-weight: $font-weight;
+}
+
+@mixin minMaxWidth($min-width, $man-width) {
+  min-width: rem($min-width);
+
+  @include media() {
+    max-width: rem($man-width);
+  }
 }
