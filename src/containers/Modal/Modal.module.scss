@@ -1,0 +1,54 @@
+@use 'styles' as *;
+
+.modalContainer {
+  position: relative;
+  padding: rem(30);
+  max-width: rem(337);
+
+  @include tabletMobile() {
+    @include clearfix();
+    max-width: rem(460);
+  }
+
+  .modalHead {
+    @include font(rem(22), rem(32), bold);
+    @include resetHeading();
+  }
+
+  .modalCheckboxContainer {
+    @include font(rem(16), rem(32));
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: rem(11);
+    color: #495057;
+  }
+
+  .modalSaveButton {
+    @include font(rem(16), rem(32), bold);
+    padding: em(8) em(10);
+    margin-top: rem(20);
+    border-radius: 3px;
+    width: 100%;
+
+    @include tabletMobile() {
+      width: rem(99);
+      float: right;
+    }
+  }
+
+  .modalCloseButton {
+    @include resetButton();
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 0;
+    width: rem(14);
+
+    &::before {
+      content: '';
+      display: block;
+      background: url('./images/close.svg') no-repeat;
+      height: rem(14);
+    }
+  }
+}
