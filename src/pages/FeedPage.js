@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Header from 'layout/Header/Header'
 
 const FeedPage = () => {
-  return <div>피드페이지 입니다.</div>
+  return (
+    <Fragment>
+      {/* <div>피드페이지 입니다.</div> */}
+      <Header />
+    </Fragment>
+  )
 }
 
 export default FeedPage

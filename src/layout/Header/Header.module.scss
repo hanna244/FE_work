@@ -1,0 +1,25 @@
+@use 'styles' as *;
+
+.outerContainer {
+  padding: rem(10) 0;
+  // :not(:focus-visible)에 적용 된 box-shadow: none을 무시하도록 !importnat 설정
+  box-shadow: 0px 2px 3px #00000012 !important;
+
+  @include tabletMobile() {
+    padding: rem(23) 0;
+  }
+
+  .innerContainer {
+    @include font(rem(16), rem(25));
+    margin: 0 auto;
+    min-width: rem(375);
+
+    @include tabletMobile() {
+      max-width: rem(730);
+    }
+
+    @include deskTop() {
+      max-width: rem(1140);
+    }
+  }
+}
