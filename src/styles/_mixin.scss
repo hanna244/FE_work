@@ -1,7 +1,13 @@
 $tabletMobile: 768px;
+$deskTop: 1200px;
 
-@mixin media {
+@mixin tabletMobile {
   @media (min-width: $tabletMobile) {
+    @content;
+  }
+}
+@mixin deskTop {
+  @media (min-width: $deskTop) {
     @content;
   }
 }
@@ -15,7 +21,15 @@ $tabletMobile: 768px;
 @mixin minMaxWidth($min-width, $man-width) {
   min-width: rem($min-width);
 
-  @include media() {
+  @include tabletMobile() {
     max-width: rem($man-width);
+  }
+}
+
+@mixin clearfix() {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
   }
 }

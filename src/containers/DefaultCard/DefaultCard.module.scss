@@ -43,7 +43,7 @@
       display: none;
     }
 
-    @include media() {
+    @include tabletMobile() {
       .date {
         display: inline;
         color: #495057;

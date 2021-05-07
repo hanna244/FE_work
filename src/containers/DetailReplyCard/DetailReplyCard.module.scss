@@ -6,7 +6,7 @@
   border-right: 0;
   border-radius: 0;
 
-  @include media() {
+  @include tabletMobile() {
     border: solid 1px #e1e4e7;
     border-radius: 5px;
   }
@@ -28,7 +28,7 @@
     margin-top: rem(16);
     color: #adb5bd;
 
-    @include media() {
+    @include tabletMobile() {
       margin-top: rem(15);
     }
   }

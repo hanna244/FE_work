@@ -15,7 +15,7 @@
     margin-top: rem(16);
     width: 100%;
 
-    @include media() {
+    @include tabletMobile() {
       flex-flow: row nowrap;
     }
 
