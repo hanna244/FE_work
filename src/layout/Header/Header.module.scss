@@ -11,8 +11,9 @@
 
   .innerContainer {
     @include font(rem(16), rem(25));
+    padding: 0 rem(15);
     margin: 0 auto;
-    min-width: rem(375);
+    min-width: rem(335);
 
     @include tabletMobile() {
       max-width: rem(730);

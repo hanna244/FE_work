@@ -1,10 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { outerContainer, innerContainer } from './Header.module.scss'
+import { PropTypes } from 'prop-types'
 
 const Header = ({ SubmitDate, SubmitName, ...propTypes }) => {
   return (
-    <header className={outerContainer}>
+    <header className={outerContainer} {...propTypes}>
       <div className={innerContainer}>
         [{SubmitDate}] {SubmitName}
       </div>
@@ -17,6 +17,9 @@ Header.defaultProps = {
   SubmitName: '이름',
 }
 
-Header.propTypes = {}
+Header.propTypes = {
+  SubmitDate: PropTypes.string,
+  SubmitName: PropTypes.string,
+}
 
 export default Header
